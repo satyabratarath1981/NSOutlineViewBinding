@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CreateUser" customModule="OutlineWithController" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonCreateUser" destination="LmC-xn-4aq" id="PtX-b9-wgq"/>
+                <outlet property="userTextField" destination="qYU-Zx-u3t" id="3eX-06-Y9D"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Create User" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="478" height="107"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g66-XF-0vu">
+                        <rect key="frame" x="29" y="70" width="76" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="User Name:" id="PBN-jO-5zg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qYU-Zx-u3t">
+                        <rect key="frame" x="111" y="65" width="337" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Yf8-qM-6wk">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LmC-xn-4aq">
+                        <rect key="frame" x="329" y="13" width="113" height="32"/>
+                        <buttonCell key="cell" type="push" title="Create User" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IsS-XU-TYk">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="createUser:" target="-2" id="FBk-QZ-OzU"/>
+                            <binding destination="-2" name="enabled" keyPath="self" id="tIh-5y-hzT">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FZC-t1-NLP">
+                        <rect key="frame" x="243" y="13" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7NS-50-g9f">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelUser:" target="-2" id="bTL-9L-dBk"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qYU-Zx-u3t" firstAttribute="leading" secondItem="g66-XF-0vu" secondAttribute="trailing" constant="8" symbolic="YES" id="5ai-X8-6Ue"/>
+                    <constraint firstAttribute="bottom" secondItem="LmC-xn-4aq" secondAttribute="bottom" constant="20" id="7t4-mF-5M2"/>
+                    <constraint firstAttribute="trailing" secondItem="LmC-xn-4aq" secondAttribute="trailing" constant="42" id="SS7-Z7-KfX"/>
+                    <constraint firstAttribute="bottom" secondItem="FZC-t1-NLP" secondAttribute="bottom" constant="20" id="YC7-SY-1NZ"/>
+                    <constraint firstItem="qYU-Zx-u3t" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="YhO-aL-fR2"/>
+                    <constraint firstAttribute="trailing" secondItem="qYU-Zx-u3t" secondAttribute="trailing" constant="30" id="c9J-RH-mvi"/>
+                    <constraint firstItem="LmC-xn-4aq" firstAttribute="leading" secondItem="FZC-t1-NLP" secondAttribute="trailing" constant="16" id="mdZ-TT-hPF"/>
+                    <constraint firstItem="g66-XF-0vu" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="ntb-6V-fmO"/>
+                    <constraint firstItem="g66-XF-0vu" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="31" id="seB-22-g7N"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="120.5" y="79.5"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="2oU-It-shR"/>
+    </objects>
+</document>
